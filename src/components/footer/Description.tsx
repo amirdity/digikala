@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Description() {
+  const showMore: React.ReactNode = <p> مشاهده لبشتر &gt; </p>;
+  const showLess: React.ReactNode = <p> بستن &gt; </p>;
+
+  const [more, setMore] = useState<boolean>(false);
+  const [height, setHeight] = useState<string>("h-[140px]");
+  const [buttonText, setButtonText] = useState<React.ReactNode>(showMore);
+  function showHandler(): void {
+    setMore(!more);
+    if (more) {
+      setHeight("h-auto");
+      setButtonText(showLess);
+    } else {
+      setHeight("h-[140px]");
+      setButtonText(showMore);
+    }
+  }
+
   return (
-    <div className="flex flex-row justify-between items-start mt-10">
+    <div className="flex flex-row justify-between items-start my-10">
       {/* DESCRIPTION SECTION */}
       <div>
-        <div className="relative lg:ml-10 ml-0 text-neutral-500 text-body-2 overflow-hidden h-[125px] max-w-[1154px]">
-          <h1>
-            <strong>
-              فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین
-            </strong>
+        <div
+          className={`relative lg:ml-10 ml-0 text-neutral-500  overflow-hidden h-[125px] ${height} max-w-[1154px] leading-8 font-[400] big-text-description`}
+        >
+          <h1 className="font-bold text-[21px] leading-8 my-5">
+            فروشگاه اینترنتی دیجی‌کالا، بررسی، انتخاب و خرید آنلاین
           </h1>
 
           <p>
@@ -359,27 +376,13 @@ function Description() {
           </p>
 
           <p>&nbsp;</p>
-
-          {/* <div className="simple-translate-system-theme" id="simple-translate">
-<div>
-<div className="simple-translate-button isShow" className="background-image: url(&quot;chrome-extension://ibplnjkanclpjokhdolnendpplpjiace/icons/512.png&quot;); height: 22px; width: 22px; top: 70px; left: 106px;">&nbsp;</div>
-
-<div className="simple-translate-panel " className="width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px;">
-<div className="simple-translate-result-wrapper" className="overflow: hidden;">
-<div className="simple-translate-move" draggable="true">&nbsp;</div>
-
-<div className="simple-translate-result-contents">
-<p className="simple-translate-result" dir="auto">&nbsp;</p>
-
-<p className="simple-translate-candidate" dir="auto">&nbsp;</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div> */}
         </div>
-        <button>sdfsdfsdfsdfs</button>
+        <button
+          className="text-blue-700 pointer-events-auto font-[400] text-[19px]"
+          onClick={showHandler}
+        >
+          {buttonText}
+        </button>
       </div>
       {/* NAMAD SECTION */}
       <div className="max-w-[450px] flex flex-row justify-between gap-x-5">

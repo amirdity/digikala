@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-  /* IRANYEKN FONTS */
+/* IRANYEKN FONTS */
 
 @font-face {
   font-family: Iranyekan-light;
@@ -36,17 +36,16 @@
   font-family: Iranyekan;
   src: url("../font/Qs_Iranyekan.ttf");
 }
-*{
+* {
   font-family: Iranyekan;
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-size: 12px;
 }
 
-
-
-
-
+.big-text-description:before {
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 50%, #fff);
+}
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
