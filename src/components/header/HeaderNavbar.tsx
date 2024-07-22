@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-type Pages = {
+type HeaderNavbar = {
   link: string;
   src: string;
   alt: string;
   children: React.ReactNode;
 };
-function Pages({ link, src, alt, children }: Pages) {
+function HeaderNavbar({ link, src, alt, children }: HeaderNavbar) {
   // prees cntrl + shift + 2 to have half space
   return (
     <>
@@ -22,6 +22,6 @@ function Pages({ link, src, alt, children }: Pages) {
   );
 }
 
-Pages.propTypes = {};
+HeaderNavbar.propTypes = {};
 
-export default Pages;
+export default HeaderNavbar;

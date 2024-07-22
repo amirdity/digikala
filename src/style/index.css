@@ -6,38 +6,38 @@
 
 @font-face {
   font-family: Iranyekan-light;
-  src: url("./font/Qs_Iranyekan\ light.ttf");
+  src: url("../font/Qs_Iranyekan\ light.ttf");
 }
 @font-face {
   font-family: Iranyekan-black;
-  src: url("./font/Qs_Iranyekan\ black.ttf");
+  src: url("../font/Qs_Iranyekan\ black.ttf");
 }
 @font-face {
   font-family: Iranyekan-bold;
-  src: url("./font/Qs_Iranyekan\ bold.ttf");
+  src: url("../font/Qs_Iranyekan\ bold.ttf");
 }
 @font-face {
   font-family: Iranyekan-extrablack;
-  src: url("./font/Qs_Iranyekan\ extrablack.ttf");
+  src: url("../font/Qs_Iranyekan\ extrablack.ttf");
 }
 @font-face {
   font-family: Iranyekan-extrabold;
-  src: url("./font/Qs_Iranyekan\ extrabold.ttf");
+  src: url("../font/Qs_Iranyekan\ extrabold.ttf");
 }
 @font-face {
   font-family: Iranyekan-medium;
-  src: url("./font/Qs_Iranyekan\ medium.ttf");
+  src: url("../font/Qs_Iranyekan\ medium.ttf");
 }
 @font-face {
   font-family: Iranyekan-thin;
-  src: url("./font/Qs_Iranyekan\ thin.ttf");
+  src: url("../font/Qs_Iranyekan\ thin.ttf");
 }
 @font-face {
   font-family: Iranyekan;
-  src: url("./font/Qs_Iranyekan.ttf");
+  src: url("../font/Qs_Iranyekan.ttf");
 }
 *{
-  font-family: Iranyekan-black;
+  font-family: Iranyekan;
   box-sizing: border-box;
   background-color: #FFFFFF;
   font-size: 12px;

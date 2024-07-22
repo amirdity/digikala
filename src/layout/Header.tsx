@@ -1,11 +1,11 @@
 import haraj from "/haraj.webp";
 import logo from "/digikala-logo-asli.svg";
 import MegaMenu from "../components/header/MegaMenu";
-import Pages from "../page/Pages";
+import HeaderNavbar from "../components/header/HeaderNavbar";
 function Header() {
   return (
     <header className="w-full flex flex-col">
-      {/*-------------- BANER ----------------------*/}
+      {/*------------------------ BANER ----------------------*/}
       <a href="/">
         <picture>
           <img
@@ -15,8 +15,8 @@ function Header() {
           />
         </picture>
       </a>
-      {/* ------------------MAIN HEADER------------------ */}
-      <div className="flex w-full mx-auto justify-between md:px-4 grow container flex-row h-[68px] max-w-[1644px] ">
+      {/* ------------------MAIN HEADER----------------------- */}
+      <div className="flex w-full mx-auto justify-between md:px-4 grow container flex-row h-[68px] max-w-[1676px] ">
         <div className="flex flex-row my-auto gap-x-10 ">
           <img
             src={logo}
@@ -44,50 +44,58 @@ function Header() {
         </div>
       </div>
       {/* ---------------------NAVBAR------------------------- */}
-      <nav className=" flex flex-row my-auto justify-between md:px-4 grow container mx-auto">
+      <nav className=" flex flex-row my-auto justify-between md:px-4 grow container mx-auto h-[68px] max-w-[1644px]">
         <div className="flex flex-row h-[40px] gap-x-5">
           <MegaMenu />
-          <Pages
+          <HeaderNavbar
             src="/shegeftAngiz.svg"
             alt="شگفت‌انگیزها"
             link="/incredible-offers"
           >
             شگفت‌انگیزها
-          </Pages>
-          <Pages src="/super-market-icon.svg" alt="سوپرمارکت" link="/fresh">
+          </HeaderNavbar>
+          <HeaderNavbar
+            src="/super-market-icon.svg"
+            alt="سوپرمارکت"
+            link="/fresh"
+          >
             سوپرمارکت
-          </Pages>
-          <Pages
+          </HeaderNavbar>
+          <HeaderNavbar
             src="/giftCart-icon.svg"
             alt="کارت هدیه"
             link="/dk-ds-gift-card"
           >
             کارت هدیه
-          </Pages>
-          <Pages
+          </HeaderNavbar>
+          <HeaderNavbar
             src="/bestSeleres-icon.svg"
             alt="پرفروش‌ترین‌ها"
             link="/best-selling"
           >
             پرفروش‌ترین‌ها
-          </Pages>
-          <Pages
+          </HeaderNavbar>
+          <HeaderNavbar
             src="/off-icon.svg"
             alt="تخفیف‌ها و پیشنهادها"
             link="/promotion-center"
           >
             تخفیف‌ها و پیشنهادها
-          </Pages>
-          <Pages src="" alt="" link="/faq">
+          </HeaderNavbar>
+          <HeaderNavbar src="" alt="" link="/faq">
             سوالی دارید؟
-          </Pages>
+          </HeaderNavbar>
           <span className="h-[20px] w-[1px] border-gray border border-solid my-auto" />
-          <Pages src="" alt="" link="/seller-introduction">
+          <HeaderNavbar src="" alt="" link="/seller-introduction">
             در دیجی‌کالا بفروشید!
-          </Pages>
+          </HeaderNavbar>
         </div>
         <div className="flex flex-row w-[173px] items-center gap-x-2">
-          <img src="/location-icon.svg" alt="لوکیشن" className="w-[20px] h-[20px]" />
+          <img
+            src="/location-icon.svg"
+            alt="لوکیشن"
+            className="w-[20px] h-[20px]"
+          />
           لطفا شهر خود را انتخاب کنید
         </div>
       </nav>

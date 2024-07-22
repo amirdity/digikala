@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Homepage(props) {
+function Homepage() {
   return (
     <div>Homepage</div>
   )
