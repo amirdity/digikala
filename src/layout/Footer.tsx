@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import SuportLinks from "../components/footer/SuportLinks";
 import FooterNavlink from "../components/footer/FooterNavlink";
+import DownloadLink from "../components/footer/DownloadLink";
+import Description from "../components/footer/Description";
 
 function Footer() {
   return (
@@ -61,7 +63,9 @@ function Footer() {
         </SuportLinks>
       </div>
       <div>
-        <FooterNavlink/>
+        <FooterNavlink />
+        <DownloadLink />
+        <Description/>
       </div>
     </footer>
   );

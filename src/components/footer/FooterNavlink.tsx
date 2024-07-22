@@ -27,7 +27,6 @@ const data = [
     nav: ["نحوه ثبت سفارش", "رویه ارسال سفارش", "شیوه‌های پرداخت"],
   },
 ];
-
 function FooterNavlink() {
   return (
     <div className="mx-auto justify-center max-w-[1676px] flex flex-row mt-16">
@@ -46,18 +45,19 @@ function FooterNavlink() {
           ))}
         </div>
       ))}
+      {/* ------------------SOCHIAL MEDIA ------------------------*/}
       <div>
         <h1>همراه ما باشید!</h1>
-        <div>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+        <div className="flex flex-row justify-between w-[256px]">
+          <img src="/instagram.svg" alt="اینستگرام" />
+          <img src="/twitter.svg" alt="توییتر" />
+          <img src="/linke.svg" alt="لینکدین" />
+          <img src="/aparat.svg" alt="آپارات" />
         </div>
         <h1>با ثبت ایمیل، از تخفیف‌ها با‌خبر شوید</h1>
-        <div>
-          <input type="email" placeholder="ایمیل شما"/>
-          <button>ثبت</button>
+        <div className="flex flex-row justify-between">
+          <input type="email" placeholder="ایمیل شما"className=" bg-gray-200 rounded-lg p-3" />
+          <button className="text-white bg-slate-500">ثبت</button>
         </div>
       </div>
     </div>
