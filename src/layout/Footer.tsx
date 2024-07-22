@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SuportLinks from "../components/footer/SuportLinks";
+import FooterNavlink from "../components/footer/FooterNavlink";
 
 function Footer() {
   return (
@@ -58,6 +59,9 @@ function Footer() {
         >
           ﺿﻤﺎﻧﺖ اﺻﻞ ﺑﻮدن ﮐﺎﻟﺎ
         </SuportLinks>
+      </div>
+      <div>
+        <FooterNavlink/>
       </div>
     </footer>
   );
