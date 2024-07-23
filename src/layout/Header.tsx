@@ -4,7 +4,7 @@ import MegaMenu from "../components/header/MegaMenu";
 import HeaderNavbar from "../components/header/HeaderNavbar";
 function Header() {
   return (
-    <header className="w-full flex flex-col">
+    <header className="w-full flex flex-col border-b-gray-300 border-b-[1px]">
       {/*------------------------ BANER ----------------------*/}
       <a href="/">
         <picture>
@@ -90,7 +90,7 @@ function Header() {
             در دیجی‌کالا بفروشید!
           </HeaderNavbar>
         </div>
-        <div className="flex flex-row w-[173px] items-center gap-x-2">
+        <div className="flex flex-row w-[173px] items-center gap-x-2 mb-0">
           <img
             src="/location-icon.svg"
             alt="لوکیشن"

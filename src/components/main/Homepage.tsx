@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import StorySlide from './StorySlide'
 
 function Homepage() {
   return (
-    <div>Homepage</div>
+    <div className='flex flex-col gap-y-4 items-center '>
+      <StorySlide/>
+    </div>
   )
 }
 

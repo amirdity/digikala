@@ -1,5 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
+
 const data = [
   {
     title: "با دیجی‌کالا",
@@ -29,7 +28,7 @@ const data = [
 ];
 function FooterNavlink() {
   return (
-    <div className="mx-auto justify-center max-w-[1676px] flex flex-row mt-16">
+    <div className="justify-between max-w-[1676px] flex flex-row mt-16">
       {data.map((data) => (
         <div className="w-6/12 flex flex-col">
           <h1 className=" text-[#3f4064] text-[16px] font-[700]">
