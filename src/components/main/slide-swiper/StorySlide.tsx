@@ -19,31 +19,99 @@ const slide: Array<Slide> = [
 function StorySlide() {
   return (
     <>
-      <div className="max-w-[1336px] flex h-[150px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle">
+      <div className="max-w-[1336px] w-screen  flex h-[150px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle">
         <Swiper
           dir="rtl"
           slidesPerView={13}
           spaceBetween={1}
           navigation={true}
-          
-          // breakpoints={{
-          //   640: {
-          //     slidesPerView: 4,
-          //     spaceBetween: 10,
-          //   },
-          //   768: {
-          //     slidesPerView: 7,
-          //     spaceBetween: 10,
-          //   },
-          //   1024: {
-          //     slidesPerView: 13,
-          //     spaceBetween: 10,
-          //   },
-          // }}
+          breakpoints={{
+            640: {
+              slidesPerView: 6,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 8,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 13,
+              spaceBetween: 10,
+            },
+          }}
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col h-[140px] w-[84px]">
+              <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]">
+                <img
+                  src="https://dkstatics-public.digikala.com/digikala-content-x-post-media/a6b64d37d9bc8ec41b1800756462669bc92d7123_1721324067.jpg?x-oss-process=image/resize,m_fill,h_115,w_115"
+                  alt="اسپرینگ رول سبزیجات"
+                  className="rounded-full w-[74px] h-[74px] p-1 "
+                />
+              </div>
+              <p className="w-[84px] h-[48px] story-text">
+                تقدسم به بچه های خوب ایران و بچه کونی های محل
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col h-[140px] w-[84px]">
+              <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]">
+                <img
+                  src="https://dkstatics-public.digikala.com/digikala-content-x-post-media/a6b64d37d9bc8ec41b1800756462669bc92d7123_1721324067.jpg?x-oss-process=image/resize,m_fill,h_115,w_115"
+                  alt="اسپرینگ رول سبزیجات"
+                  className="rounded-full w-[74px] h-[74px] p-1 "
+                />
+              </div>
+              <p className="w-[84px] h-[48px] story-text">
+                تقدسم به بچه های خوب ایران و بچه کونی های محل
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col h-[140px] w-[84px]">
+              <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]">
+                <img
+                  src="https://dkstatics-public.digikala.com/digikala-content-x-post-media/a6b64d37d9bc8ec41b1800756462669bc92d7123_1721324067.jpg?x-oss-process=image/resize,m_fill,h_115,w_115"
+                  alt="اسپرینگ رول سبزیجات"
+                  className="rounded-full w-[74px] h-[74px] p-1 "
+                />
+              </div>
+              <p className="w-[84px] h-[48px] story-text">
+                تقدسم به بچه های خوب ایران و بچه کونی های محل
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col h-[140px] w-[84px]">
+              <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]">
+                <img
+                  src="https://dkstatics-public.digikala.com/digikala-content-x-post-media/a6b64d37d9bc8ec41b1800756462669bc92d7123_1721324067.jpg?x-oss-process=image/resize,m_fill,h_115,w_115"
+                  alt="اسپرینگ رول سبزیجات"
+                  className="rounded-full w-[74px] h-[74px] p-1 "
+                />
+              </div>
+              <p className="w-[84px] h-[48px] story-text">
+                تقدسم به بچه های خوب ایران و بچه کونی های محل
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex flex-col h-[140px] w-[84px]">
+              <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]">
+                <img
+                  src="https://dkstatics-public.digikala.com/digikala-content-x-post-media/a6b64d37d9bc8ec41b1800756462669bc92d7123_1721324067.jpg?x-oss-process=image/resize,m_fill,h_115,w_115"
+                  alt="اسپرینگ رول سبزیجات"
+                  className="rounded-full w-[74px] h-[74px] p-1 "
+                />
+              </div>
+              <p className="w-[84px] h-[48px] story-text">
+                تقدسم به بچه های خوب ایران و بچه کونی های محل
+              </p>
+            </div>
+          </SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
           <SwiperSlide>Slide 3</SwiperSlide>
           <SwiperSlide>Slide 4</SwiperSlide>
