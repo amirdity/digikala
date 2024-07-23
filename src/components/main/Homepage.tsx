@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StorySlide from './StorySlide'
+import StorySlide from './slide-swiper/StorySlide'
 
 
 function Homepage() {

@@ -1,10 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-// import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "./styles.css";
 type Slide = {
   src: string;
   alt: string;
@@ -20,7 +19,51 @@ const slide: Array<Slide> = [
 function StorySlide() {
   return (
     <>
-      <div className="max-w-[1336px] flex h-[150px]  pt-5 overflow-hidden justify-center items-center text-center align-middle mx-10">
+      <div className="max-w-[1336px] flex h-[150px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle">
+        <Swiper
+          dir="rtl"
+          slidesPerView={13}
+          spaceBetween={1}
+          navigation={true}
+          
+          // breakpoints={{
+          //   640: {
+          //     slidesPerView: 4,
+          //     spaceBetween: 10,
+          //   },
+          //   768: {
+          //     slidesPerView: 7,
+          //     spaceBetween: 10,
+          //   },
+          //   1024: {
+          //     slidesPerView: 13,
+          //     spaceBetween: 10,
+          //   },
+          // }}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 5</SwiperSlide>
+          <SwiperSlide>Slide 6</SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide>Slide 10</SwiperSlide>
+          <SwiperSlide>Slide 11</SwiperSlide>
+          <SwiperSlide>Slide 12</SwiperSlide>
+          <SwiperSlide>Slide 13</SwiperSlide>
+          <SwiperSlide>Slide 14</SwiperSlide>
+          <SwiperSlide>Slide 15</SwiperSlide>
+          <SwiperSlide>Slide 16</SwiperSlide>
+          <SwiperSlide>Slide 17</SwiperSlide>
+          <SwiperSlide>Slide 18</SwiperSlide>
+        </Swiper>
+      </div>
+      {/* <div className="max-w-[1336px] flex h-[150px]  pt-5 overflow-hidden justify-center items-center text-center align-middle mx-10">
         <Swiper
           dir="rtl"
           navigation={true}
@@ -308,7 +351,7 @@ function StorySlide() {
             <SwiperSlide>Slide 9</SwiperSlide>
           </Swiper>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
