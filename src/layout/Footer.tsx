@@ -10,7 +10,7 @@ import FooterFoot from "../components/footer/FooterFoot";
 function Footer() {
   return (
     <>
-      <footer className="flex flex-col justify-center max-w-[1676px] mx-auto">
+      <footer className="flex flex-col justify-center max-w-[1676px] mx-auto mt-10">
         {/* ----------------------HEADER OF THE FOOTER------------------------- */}
         <div className="flex flex-row justify-between items-center  max-w-[1676px]">
           <img src="/digi-footer.svg" alt="دیجی کالا" className="h-[30]" />
