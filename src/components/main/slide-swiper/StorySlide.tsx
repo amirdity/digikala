@@ -81,7 +81,7 @@ const slide: Array<Slide> = [
 function StorySlide() {
   return (
     <>
-      <div className="max-w-[1336px] w-screen  flex h-[150px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle">
+      <div className="max-w-[1336px] w-screen  flex h-[150px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle storySlide">
         <Swiper
           dir="rtl"
           slidesPerView={13}

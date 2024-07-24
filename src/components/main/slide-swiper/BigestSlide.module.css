@@ -1,28 +1,26 @@
+.bigestslide{
+  height: 300px;
+}
 
-/* .div .swiper {
-  width: 100%;
-  height: 100%;
-} */
-
-.div .swiper-slide {
-  /* text-align: center;
+.bigestslide .swiper-slide {
+  text-align: center;
   font-size: 18px;
-  background: #fff; */
+  background: #fff;
 
   /* Center slide text vertically */
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-} 
+  align-items: center;
+}
 
-/* .div .swiper-slide img {
+.bigestslide .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-} */
+}
 
-/* .div .autoplay-progress {
+.bigestslide .autoplay-progress {
   position: absolute;
   right: 16px;
   bottom: 16px;
@@ -34,9 +32,9 @@
   justify-content: center;
   font-weight: bold;
   color: var(--swiper-theme-color);
-} */
+}
 
-/* .div .autoplay-progress svg {
+.bigestslide .autoplay-progress svg {
   --progress: 0;
   position: absolute;
   left: 0;
@@ -50,4 +48,4 @@
   stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
-} */
+}

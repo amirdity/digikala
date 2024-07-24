@@ -7,7 +7,7 @@ function Homepage() {
   return (
     <div className="flex flex-col gap-y-4 items-center max-w-[1920px] overflow-hidden justify-center mx-auto">
       <StorySlide />
-      {/* <BigestSlide/> */}
+      <BigestSlide/>
     </div>
   );
 }
