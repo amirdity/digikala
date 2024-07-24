@@ -1,9 +1,29 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
 
+// type Slide = {
+//   src: string;
+//   alt: string;
+//   off: string;
+//   text: string;
+//   price: string;
+// };
+// const slide: Array<Slide> = [
+//   { src: "", alt: "", off: "", text: "", price: "" },
+//   { src: "", alt: "", off: "", text: "", price: "" },
+//   { src: "", alt: "", off: "", text: "", price: "" },
+//   { src: "", alt: "", off: "", text: "", price: "" },
+//   { src: "", alt: "", off: "", text: "", price: "" },
+//   { src: "", alt: "", off: "", text: "", price: "" },
+//   { src: "", alt: "", off: "", text: "", price: "" },
+//   // { src: "", alt: "", off: "", text: "", price: "" },
+//   // { src: "", alt: "", off: "", text: "", price: "" },
+//   // { src: "", alt: "", off: "", text: "", price: "" },
+//   // { src: "", alt: "", off: "", text: "", price: "" },
+// ];
 type Slide = {
   src: string;
   alt: string;
@@ -78,48 +98,73 @@ const slide: Array<Slide> = [
     alt: "مداد رنگی ولی آبرنگی🖌️",
   },
 ];
-function StorySlide() {
+import classes from "./ShegeftAngizSlide.module.css";
+function ShegeftAngizSlide() {
   return (
-    <div className="max-w-[1336px] w-screen  flex h-[150px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle storySlide">
-      <Swiper
-        dir="rtl"
-        slidesPerView={13}
-        spaceBetween={1}
-        navigation={true}
-        breakpoints={{
-          640: {
-            slidesPerView: 6,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 8,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 13,
-            spaceBetween: 10,
-          },
-        }}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {slide.map((slide) => (
+    <div
+      className={`${classes.shgeftAngiz} flex flex-row justify-center items-center align-middle h-[294px] rounded-[20px]`}
+    >
+      <div className="max-w-[1336px] w-screen  flex h-[254px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle storySlide bg-inherit py-5 px-0">
+        <Swiper
+          dir="rtl"
+          slidesPerView={7}
+          spaceBetween={200}
+          navigation={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 6,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 8,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 13,
+              spaceBetween: 10,
+            },
+          }}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
           <SwiperSlide>
-            <div className="flex flex-col h-[140px] w-[84px]">
-              <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]  mt-2">
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  className="rounded-full w-[74px] h-[74px] p-1 "
-                />
+            <div className={`flex flex-col bg-inherit ${classes.firstSlide}`}>
+              <div>
+                <img />
               </div>
-              <p className="w-[84px] h-[48px] story-text">{slide.alt}</p>
+              <div>timer</div>
+              <div>
+                <img />
+              </div>
+              <div>link</div>
             </div>
           </SwiperSlide>
-        ))}
-      </Swiper>
+          {slide.map((slide) => (
+            <SwiperSlide>
+              <div className="flex flex-col h-[254px] w-[160px]">
+                <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]  mt-2">
+                  <img
+                    src={slide.src}
+                    alt={slide.alt}
+                    className="rounded-full w-[74px] h-[74px] p-1"
+                  />
+                </div>
+                <p className="w-[84px] h-[48px] story-text">{slide.alt}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+          <SwiperSlide>
+            <div>
+              <div>
+                <img src="" alt="" />
+              </div>
+              <p>مشاهده همه</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   );
 }
 
-export default StorySlide;
+export default ShegeftAngizSlide;
