@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
+
 
 // type Slide = {
 //   src: string;
@@ -19,10 +17,10 @@ import { Pagination, Navigation } from "swiper/modules";
 //   { src: "", alt: "", off: "", text: "", price: "" },
 //   { src: "", alt: "", off: "", text: "", price: "" },
 //   { src: "", alt: "", off: "", text: "", price: "" },
-//   // { src: "", alt: "", off: "", text: "", price: "" },
-//   // { src: "", alt: "", off: "", text: "", price: "" },
-//   // { src: "", alt: "", off: "", text: "", price: "" },
-//   // { src: "", alt: "", off: "", text: "", price: "" },
+  // { src: "", alt: "", off: "", text: "", price: "" },
+  // { src: "", alt: "", off: "", text: "", price: "" },
+  // { src: "", alt: "", off: "", text: "", price: "" },
+  // { src: "", alt: "", off: "", text: "", price: "" },
 // ];
 type Slide = {
   src: string;
@@ -104,11 +102,11 @@ function ShegeftAngizSlide() {
     <div
       className={`${classes.shgeftAngiz} flex flex-row justify-center items-center align-middle h-[294px] rounded-[20px]`}
     >
-      <div className="max-w-[1336px] w-screen  flex h-[254px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle storySlide bg-inherit py-5 px-0">
+      <div className="max-w-[1336px] w-screen flex h-[254px] pt-5 flex-row  mx-auto justify-between items-center text-center  storySlide bg-inherit py-5 px-0">
         <Swiper
           dir="rtl"
-          slidesPerView={8}
-          spaceBetween={20}
+          slidesPerView={9}
+          spaceBetween={1}
           navigation={true}
           // breakpoints={{
           //   640: {
@@ -130,7 +128,7 @@ function ShegeftAngizSlide() {
           {/* FIRST SLIDE */}
           <SwiperSlide>
             <div
-              className={`flex flex-col ${classes.firstSlide}  h-[254px] w-[160px] justify-start items-center text-white`}
+              className={`flex flex-col ${classes.firstSlide}  h-[254px] w-[160px] justify-start items-center text-white `}
             >
               <div className="bg-inherit">
                 <img
@@ -151,8 +149,8 @@ function ShegeftAngizSlide() {
             </div>
           </SwiperSlide>
           {slide.map((slide) => (
-            <SwiperSlide className="mx-3">
-              <div className="flex flex-col h-[254px] w-[160px]">
+            <SwiperSlide className=" border-red-500 border-x-[3px]">
+              <div className="flex flex-col h-[254px] w-[165px]  justify-center items-center">
                 <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]  mt-2">
                   <img
                     src={slide.src}
@@ -166,9 +164,13 @@ function ShegeftAngizSlide() {
           ))}
           {/* LAST SLIDE */}
           <SwiperSlide>
-            <div>
-              <div>
-                <img src="" alt="" />
+            <div className="flex flex-col h-[254px] w-[165px]  justify-center items-center">
+              <div className="flex flex-row justify-center border-[#19bfd3] border-[3px] rounded-full h-[51px] w-[51px]">
+                <img
+                  src="arrowSlide.svg"
+                  alt="مشاهده همه"
+                  className=" rounded-full"
+                />
               </div>
               <p>مشاهده همه</p>
             </div>
