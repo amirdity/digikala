@@ -1,101 +1,105 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
-
-// type Slide = {
-//   src: string;
-//   alt: string;
-//   off: string;
-//   text: string;
-//   price: string;
-// };
-// const slide: Array<Slide> = [
-//   { src: "", alt: "", off: "", text: "", price: "" },
-//   { src: "", alt: "", off: "", text: "", price: "" },
-//   { src: "", alt: "", off: "", text: "", price: "" },
-//   { src: "", alt: "", off: "", text: "", price: "" },
-//   { src: "", alt: "", off: "", text: "", price: "" },
-//   { src: "", alt: "", off: "", text: "", price: "" },
-//   { src: "", alt: "", off: "", text: "", price: "" },
-  // { src: "", alt: "", off: "", text: "", price: "" },
-  // { src: "", alt: "", off: "", text: "", price: "" },
-  // { src: "", alt: "", off: "", text: "", price: "" },
-  // { src: "", alt: "", off: "", text: "", price: "" },
-// ];
 type Slide = {
   src: string;
   alt: string;
+  off: string;
+
+  price: string;
+  realPrice: string;
 };
 const slide: Array<Slide> = [
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/e88495d57a9021171b27464393d27fc778957df7_1720952448.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "دوربین کدوم بهتره؟ Note 13 Pro Vs Galaxy A55",
+    src: "https://dkstatics-public.digikala.com/digikala-products/3dbc56ad9ae7501ac16731a111ae465dd33e8404_1719228862.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "گوشی موبایل کاجیتل مدل KG1100 دو سیم کارت",
+    off: "5",
+
+    price: "649",
+    realPrice: "680",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/a6b64d37d9bc8ec41b1800756462669bc92d7123_1721324067.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "اسپرینگ رول سبزیجات",
+    src: "https://dkstatics-public.digikala.com/digikala-products/1a40e1895e7704d97efd62d5b4fdae5168c490a6_1718198274.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "گوشی موبایل بلووم پلاس مدل Z7 دو سیم کارت ظرفیت 32 مگابایت و رم 32 مگابایت",
+    off: "3",
+
+    price: "659",
+    realPrice: "680",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/1b61bd14e786d9ceabc93d65327081510542d417_1721333364.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "میانرده آنر در برابر سامسونگ📱",
+    src: "https://dkstatics-public.digikala.com/digikala-products/2a7169b8bf0c3ec6559cb24bd223935be427b0b7_1656498029.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "گوشی موبایل دوجی مدل N30 دو سیم‌ کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت",
+    off: "3",
+
+    price: "4,090",
+    realPrice: "4,199",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/a36a43305f083ea5339b7d6382852a3ff8fa8fd2_1721329371.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "با این کمپ رویایی بزن",
+    src: "https://dkstatics-public.digikala.com/digikala-products/41513f36ca8ed31b603737010b4a109c646f7f76_1707811518.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "گوشی موبایل آنر مدل X9b دو سیم کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت",
+    off: "2",
+
+    price: "17,899",
+    realPrice: "18,295",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/35c091eb742976d5aa5ca1d1e3333e1e88ca4387_1721286963.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "مداد رنگی ولی آبرنگی🖌️",
+    src: "https://dkstatics-public.digikala.com/digikala-products/460f63634004264d921447fb15c02e151b008cbc_1708347859.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "هندزفری سونی مدل MDR-EX14AP",
+    off: "43",
+
+    price: "299",
+    realPrice: "529",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/107295c7099dabfdbe930953fd406d8b1a83ab5d_1721311314.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "خشکی پوستتو باهاش برطرف کن",
+    src: "https://dkstatics-public.digikala.com/digikala-products/001a96c9e436fef968fb71b1a59226711e03acb0_1712072503.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "هدست سونی مدل MDR-ZX110",
+    off: "16",
+
+    price: "489",
+    realPrice: "579",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/bb53a4c5b3717a86ef3a3d056d9c8e1febf41096_1720369667.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "مکمل چی بخوریم؟",
+    src: "https://dkstatics-public.digikala.com/digikala-products/a5078d3ed60f9e655dbe0cd53d97e55742485a4f_1704809564.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "هدست بلوتوثی سونی مدل WH-CH720N",
+    off: "6",
+
+    price: "5,799",
+    realPrice: "6,199",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/8185d2d6872d08ec70240c52565fac29556283fb_1721329220.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "کیبورد مکانیکی عالی برای نویسنده‌ها",
+    src: "https://dkstatics-public.digikala.com/digikala-products/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "هدفون بلوتوثی کیو سی وای مدل T13 TWS",
+    off: "5",
+
+    price: "619",
+    realPrice: "649",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/770d9c06828a75d530004ccdcfadfe4c950a7a61_1721502590.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "شامپو خاک رس هیدرودرم",
+    src: "https://dkstatics-public.digikala.com/digikala-products/79e305b6d3fdea44572c6607c49aec6b7367ece9_1706866324.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "ساعت مچی عقربه‌ای مردانه سیتی زن مدل BI5000_87L",
+    off: "43",
+
+    price: "4,990",
+    realPrice: "8,800",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/374aedbaf483eaae2de66b170a754cf4b3d60e94_1720208815.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "واقعا آدم کجا بودی؟",
+    src: "https://dkstatics-public.digikala.com/digikala-products/2b1c6c08f3ee58fabb03847ba7a45e54f44d51dc_1604498377.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "محافظ کابل شارژ مدل SFP-36 مجموعه 4 عددی",
+    off: "14",
+
+    price: "23",
+    realPrice: "26",
   },
   {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/4e79e8f9c216040334912b1bbb5761f26e5b4558_1721031241.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "چرا بهترین کنسول بازی، ایکس باکس سری S است؟",
-  },
-  {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/618bfc27a9a86db320bbd451b64b79ad6b4625de_1721284234.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "گوشواره های متنوع و ارزان بخیه ای",
-  },
-  {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/3c0c7f19f6482482704b137542b3dd2b1dd3d6b5_1719166375.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "محافظ لنز با کیفیت",
-  },
-  {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/f1a9e6bcb8a82aa9a46f187790082eed3e0473d6_1720355427.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "بررسی تخته وایت برد مدل الفا",
-  },
-  {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/618bfc27a9a86db320bbd451b64b79ad6b4625de_1721284234.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "چسب دو‌طرفه قوی",
-  },
-  {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/bc175b9bd14881f06920df48ef9bc06f4686e80b_1720222101.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "شرلوک : 13 گروگان",
-  },
-  {
-    src: "https://dkstatics-public.digikala.com/digikala-content-x-post-media/35c091eb742976d5aa5ca1d1e3333e1e88ca4387_1721286963.jpg?x-oss-process=image/resize,m_fill,h_115,w_115",
-    alt: "مداد رنگی ولی آبرنگی🖌️",
+    src: "https://dkstatics-public.digikala.com/digikala-products/353ce971b368f90f0e8eeab52dcc871d77304610_1717229829.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80",
+    alt: "ست اسباب بازی ابزار مدل Engineer Funzi",
+    off: "54",
+
+    price: "139",
+    realPrice: "299",
   },
 ];
+
 import classes from "./ShegeftAngizSlide.module.css";
 function ShegeftAngizSlide() {
   return (
@@ -151,14 +155,23 @@ function ShegeftAngizSlide() {
           {slide.map((slide) => (
             <SwiperSlide className=" border-red-500 border-x-[3px]">
               <div className="flex flex-col h-[254px] w-[165px]  justify-center items-center">
-                <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]  mt-2">
+                <div className=" story items-center justify-center flex w-[80px] h-[80px]  mt-2">
                   <img
                     src={slide.src}
                     alt={slide.alt}
-                    className="rounded-full w-[74px] h-[74px] p-1"
+                    className=" w-[132px] h-[132px] p-1"
                   />
                 </div>
                 <p className="w-[84px] h-[48px] story-text">{slide.alt}</p>
+                <div className="flex flex-row ">
+                  <p>{slide.off}</p>
+                  <p>{slide.price}</p>
+                </div>
+                <div>
+                  <p>
+                    {slide.realPrice}
+                  </p>
+                </div>
               </div>
             </SwiperSlide>
           ))}
