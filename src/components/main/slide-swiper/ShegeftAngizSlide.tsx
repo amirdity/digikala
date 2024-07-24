@@ -107,40 +107,51 @@ function ShegeftAngizSlide() {
       <div className="max-w-[1336px] w-screen  flex h-[254px] pt-5 flex-row  mx-auto justify-center items-center text-center align-middle storySlide bg-inherit py-5 px-0">
         <Swiper
           dir="rtl"
-          slidesPerView={7}
-          spaceBetween={200}
+          slidesPerView={8}
+          spaceBetween={20}
           navigation={true}
-          breakpoints={{
-            640: {
-              slidesPerView: 6,
-              spaceBetween: 10,
-            },
-            768: {
-              slidesPerView: 8,
-              spaceBetween: 10,
-            },
-            1024: {
-              slidesPerView: 13,
-              spaceBetween: 10,
-            },
-          }}
+          // breakpoints={{
+          //   640: {
+          //     slidesPerView: 6,
+          //     spaceBetween: 10,
+          //   },
+          //   768: {
+          //     slidesPerView: 8,
+          //     spaceBetween: 10,
+          //   },
+          //   1024: {
+          //     slidesPerView: 13,
+          //     spaceBetween: 10,
+          //   },
+          // }}
           modules={[Pagination, Navigation]}
-          className="mySwiper"
+          className={classes.firstSlide}
         >
+          {/* FIRST SLIDE */}
           <SwiperSlide>
-            <div className={`flex flex-col bg-inherit ${classes.firstSlide}`}>
-              <div>
-                <img />
+            <div
+              className={`flex flex-col ${classes.firstSlide}  h-[254px] w-[160px] justify-start items-center text-white`}
+            >
+              <div className="bg-inherit">
+                <img
+                  src="Amazings.svg"
+                  alt="پیشنهاد شگفت انگیز"
+                  className="bg-inherit"
+                />
               </div>
-              <div>timer</div>
-              <div>
-                <img />
+              <div className="bg-inherit">timer</div>
+              <div className="bg-inherit">
+                <img
+                  src="Amazing.svg"
+                  alt="پیشنهاد شگفت انگیز"
+                  className="bg-inherit"
+                />
               </div>
-              <div>link</div>
+              <p className="bg-inherit">مشاهده همه </p>
             </div>
           </SwiperSlide>
           {slide.map((slide) => (
-            <SwiperSlide>
+            <SwiperSlide className="mx-3">
               <div className="flex flex-col h-[254px] w-[160px]">
                 <div className="rounded-full story items-center justify-center flex w-[80px] h-[80px]  mt-2">
                   <img
@@ -153,6 +164,7 @@ function ShegeftAngizSlide() {
               </div>
             </SwiperSlide>
           ))}
+          {/* LAST SLIDE */}
           <SwiperSlide>
             <div>
               <div>
