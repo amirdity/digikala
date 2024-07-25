@@ -4,6 +4,7 @@ import StorySlide from "./slide-swiper/StorySlide";
 import BigestSlide from "./slide-swiper/BigestSlide";
 import DigiJet from "./DigiJet";
 import ShegeftAngizSlide from "./slide-swiper/ShegeftAngizSlide";
+import Timer from "./slide-swiper/Timer";
 
 function Homepage() {
   return (
@@ -12,6 +13,7 @@ function Homepage() {
       <BigestSlide />
       <DigiJet />
       <ShegeftAngizSlide />
+      <Timer/>
     </div>
   );
 }
