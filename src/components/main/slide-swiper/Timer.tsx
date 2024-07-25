@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./Timer.css";
 
-const COUNTDOWN_TARGET: any = new Date("2024-06-31T23:59:59");
-
-const getTimeLeft = () => {
-const totalTimeLeft = COUNTDOWN_TARGET.getTime() - new Date().getTime();
+const COUNTDOWN_TARGET: Date = new Date("2025-06-31T23:59:59");
+type GetTimeLeft = () => {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
+const getTimeLeft: GetTimeLeft = () => {
+  const totalTimeLeft = COUNTDOWN_TARGET.getTime() - new Date().getTime();
   const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
