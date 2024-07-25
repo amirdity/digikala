@@ -168,9 +168,7 @@ function ShegeftAngizSlide() {
                   <p>{slide.price}</p>
                 </div>
                 <div>
-                  <p>
-                    {slide.realPrice}
-                  </p>
+                  <p>{slide.realPrice}</p>
                 </div>
               </div>
             </SwiperSlide>
