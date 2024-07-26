@@ -9,11 +9,12 @@ type GetTimeLeft = () => {
   seconds: number;
 };
 const getTimeLeft: GetTimeLeft = () => {
-  const totalTimeLeft = COUNTDOWN_TARGET.getTime() - new Date().getTime();
-  const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
-  const seconds = Math.floor((totalTimeLeft / 1000) % 60);
+  const totalTimeLeft: number =
+    COUNTDOWN_TARGET.getTime() - new Date().getTime();
+  const days: number = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
+  const hours: number = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
+  const minutes: number = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
+  const seconds: number = Math.floor((totalTimeLeft / 1000) % 60);
   return { days, hours, minutes, seconds };
 };
 
