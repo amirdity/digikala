@@ -1,54 +1,43 @@
-import { useState, useEffect } from "react";
-import "./Timer.css";
+import React, { useState, useEffect } from "react";
+const Target_Time: Date = new Date("2025-01-01T00:00:00");
 
-const COUNTDOWN_TARGET: Date = new Date("2025-06-31T23:59:59");
-type GetTimeLeft = () => {
-  // days: number;
-  hours: number;
-  minutes: number;
+type GetTimeLeft = {
   seconds: number;
+  minets: number;
+  hours: number;
 };
-const getTimeLeft: GetTimeLeft = () => {
-  const totalTimeLeft: number =
-    COUNTDOWN_TARGET.getTime() - new Date().getTime();
-  // const days: number = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
-  const hours: number = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
-  const minutes: number = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
-  const seconds: number = Math.floor((totalTimeLeft / 1000) % 60);
-  return { hours, minutes, seconds };
-};
-
-const Timer = () => {
-  const [timeLeft, setTimeLeft] = useState(() => getTimeLeft());
-
+function getTimeLeft(): GetTimeLeft {
+  const Current_Time: Date = new Date();
+  const timeLeft: number = Target_Time.getTime() - Current_Time.getTime();
+  const seconds: number = Math.floor((timeLeft / 1000) % 60);
+  const minets: number = Math.floor((timeLeft / (1000 * 60)) % 60);
+  const hours: number = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  return { seconds, minets, hours };
+}
+export default function Timer() {
+  const [timeLeft, setTimeLeft] = useState<GetTimeLeft>(getTimeLeft());
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(getTimeLeft());
     }, 1000);
-
     return () => {
       clearInterval(timer);
     };
   }, []);
 
   return (
-    <div className="countdown text-black">
-      <div className="content">
-        {Object.entries(timeLeft).map((el) => {
-          const label = el[0];
-          const value = el[1];
-          return (
-            <div className="box text-black" key={label}>
-              <div className="value text-black">
-                <span>{value}</span>
-              </div>
-              <span className="label text-black"> {label} </span>
-            </div>
-          );
-        })}
-      </div>
+    <div className="flex flex-row justify-center items-center align-middle text-white bg-inherit font-extrabold gap-1">
+      <p className="flex flex-col items-center justify-center bg-white w-[26px] h-[26px] rounded-lg  text-black">
+        {timeLeft.seconds.toLocaleString("ar-EG")}
+      </p>
+      :
+      <p className="flex flex-col items-center justify-center bg-white w-[26px] h-[26px] rounded-lg  text-black">
+        {timeLeft.minets.toLocaleString("ar-EG")}
+      </p>
+      :
+      <p className="flex flex-col items-center justify-center bg-white w-[26px] h-[26px] rounded-lg  text-black">
+        {timeLeft.hours.toLocaleString("ar-EG")}
+      </p>
     </div>
   );
-};
-
-export default Timer;
+}

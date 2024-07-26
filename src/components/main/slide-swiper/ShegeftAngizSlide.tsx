@@ -101,6 +101,7 @@ const slide: Array<Slide> = [
 ];
 
 import classes from "./ShegeftAngizSlide.module.css";
+import Timer from "./Timer";
 function ShegeftAngizSlide() {
   return (
     <div
@@ -130,9 +131,9 @@ function ShegeftAngizSlide() {
           className={classes.firstSlide}
         >
           {/* FIRST SLIDE */}
-          <SwiperSlide>
+          <SwiperSlide className="h-[254px] w-[166px] bg-red-600 ">
             <div
-              className={`flex flex-col ${classes.firstSlide}  h-[254px] w-[160px] justify-start items-center text-white `}
+              className={`flex flex-col bg-red-600 h-[254px] w-[94px] justify-start items-center text-white`}
             >
               <div className="bg-inherit">
                 <img
@@ -141,7 +142,9 @@ function ShegeftAngizSlide() {
                   className="bg-inherit"
                 />
               </div>
-              <div className="bg-inherit">timer</div>
+              <div className="bg-inherit">
+                <Timer />
+              </div>
               <div className="bg-inherit">
                 <img
                   src="Amazing.svg"
@@ -149,7 +152,7 @@ function ShegeftAngizSlide() {
                   className="bg-inherit"
                 />
               </div>
-              <p className="bg-inherit">مشاهده همه </p>
+              <p className="bg-inherit">مشاهده همه &gt; </p>
             </div>
           </SwiperSlide>
           {/* SECOND SLIDE */}
@@ -162,7 +165,7 @@ function ShegeftAngizSlide() {
                   className="w-[132px] h-[132px]"
                 />
               </div>
-              <p className="w-[144px] h-[40px] story-text overflow-hidden">
+              <p className="w-[144px] h-[40px] overflow-hidden">
                 {secondSlide.alt}
               </p>
               <div className="flex flex-row justify-between items-center align-middle h-[25px] w-[144px] font-bold  px-2 my-3">
@@ -193,7 +196,7 @@ function ShegeftAngizSlide() {
                     className="w-[132px] h-[132px]"
                   />
                 </div>
-                <p className="w-[144px] h-[40px] story-text overflow-hidden">
+                <p className="w-[144px] h-[40px]  overflow-hidden">
                   {slide.alt}
                 </p>
                 <div className="flex flex-row justify-between items-center align-middle h-[25px] w-[144px] font-bold  px-2 my-3">
