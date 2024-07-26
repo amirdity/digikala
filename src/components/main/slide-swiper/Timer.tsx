@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Timer.css";
 
 const COUNTDOWN_TARGET: Date = new Date("2025-06-31T23:59:59");
 type GetTimeLeft = () => {
-  days: number;
+  // days: number;
   hours: number;
   minutes: number;
   seconds: number;
@@ -11,11 +11,11 @@ type GetTimeLeft = () => {
 const getTimeLeft: GetTimeLeft = () => {
   const totalTimeLeft: number =
     COUNTDOWN_TARGET.getTime() - new Date().getTime();
-  const days: number = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
+  // const days: number = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
   const hours: number = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
   const minutes: number = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
   const seconds: number = Math.floor((totalTimeLeft / 1000) % 60);
-  return { days, hours, minutes, seconds };
+  return { hours, minutes, seconds };
 };
 
 const Timer = () => {
