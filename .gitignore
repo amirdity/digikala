@@ -9,7 +9,8 @@
 
 /.pnp
 .pnp.js
-
+#storybook
+/.storybook
 # testing
 /coverage
 
@@ -41,3 +42,4 @@ yarn-error.log*
 next-env.d.ts
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs
+*storybook.log
